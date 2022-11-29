@@ -3,7 +3,8 @@ Descrizione
 Dobbiamo creare una pagina che permetta ai nostri utenti di utilizzare il nostro generatore di password (abbastanza) sicure.
 L’esercizio è suddiviso in varie milestone ed è molto importante svilupparle in modo ordinato.
 Milestone 1
-Creare un form che invii in GET la lunghezza(count) della password. Una nostra funzione utilizzerà questo dato per generare una password casuale [RANDOM] (composta da lettere, lettere maiuscole, numeri e simboli) da restituire all’utente.
+-Creare un form che invii in GET la lunghezza(count) della password.
+Una nostra funzione utilizzerà questo dato per generare una password casuale [RANDOM] (composta da lettere, lettere maiuscole, numeri e simboli) da restituire all’utente.
 Scriviamo tutto (logica e layout) in un unico file index.php
 Milestone 2
 Verificato il corretto funzionamento del nostro codice, spostiamo la logica in un file functions.php che includeremo poi nella pagina principale
@@ -13,7 +14,7 @@ Milestone 4 (BONUS)
 Gestire ulteriori parametri per la password: quali caratteri usare fra numeri, lettere e simboli. Possono essere scelti singolarmente (es. solo numeri) oppure possono essere combinati fra loro (es. numeri e simboli, oppure tutti e tre insieme).
 Dare all’utente anche la possibilità di permettere o meno la ripetizione di caratteri uguali -->
 
-<?php 
+<?php
 /* var_dump($_GET ['characters']); */
 $alfabeto = 'abcdefghilmnopqrstuvwxyz';
 $numero = '0123456789';
@@ -76,8 +77,11 @@ $password = '';
 
 
 
-    <?php 
-    if (isset($_GET['numero']) && $_GET['numero'] === '')
+    <?php
+    if (isset($_GET['numero'])) {
+        var_dump($_GET);
+    }
+    ;
 
     ?>
 
@@ -91,3 +95,10 @@ $password = '';
 
 
 ?>
+
+
+<!-- funzione che usa rand() + strpos() 
+-->
+
+<!-- milestone 2 -->
+include __DIR__ . '/php-strong-password-generator/functions.php';
