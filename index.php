@@ -14,18 +14,6 @@ Milestone 4 (BONUS)
 Gestire ulteriori parametri per la password: quali caratteri usare fra numeri, lettere e simboli. Possono essere scelti singolarmente (es. solo numeri) oppure possono essere combinati fra loro (es. numeri e simboli, oppure tutti e tre insieme).
 Dare all’utente anche la possibilità di permettere o meno la ripetizione di caratteri uguali -->
 
-<?php
-/* var_dump($_GET ['characters']); */
-$alfabeto = 'abcdefghilmnopqrstuvwxyz';
-$numero = '0123456789';
-$simboli = '!?&%$<>/()[]{}@#';
-$password = '';
-$result = '';
-
-/* faccio una stringa grande con tutti i caratteri  */
-/* faccio un ciclo WHILE STRLEN  */
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -48,7 +36,7 @@ $result = '';
         <button type="submit">invia</button>
         <button type="submit">cancella</button>
     </form>
-    <!--  <div class="col-sm-5">
+    <div class="col-sm-5">
         <div class="form-check">
             <input type="radio" checked value="1">
             <label for="allow-duplicates" class="form-check-label">Si</label>
@@ -58,7 +46,7 @@ $result = '';
             <label for="allow-duplicates" class="form-check-label">No</label>
         </div>
     </div>
- -->
+
     <div>
         <div class="form-check">
             <input class="form-check-input" type="checkbox" value="S" id="characters" name="characters[]">
@@ -82,13 +70,7 @@ $result = '';
 
 
 
-    <?php
-    if (isset($_GET['numero'])) {
-        var_dump($_GET);
-    }
-    ;
 
-    ?>
 
 </body>
 
