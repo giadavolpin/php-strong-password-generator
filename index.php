@@ -20,6 +20,11 @@ $alfabeto = 'abcdefghilmnopqrstuvwxyz';
 $numero = '0123456789';
 $simboli = '!?&%$<>/()[]{}@#';
 $password = '';
+$result = '';
+
+/* faccio una stringa grande con tutti i caratteri  */
+/* faccio un ciclo WHILE STRLEN  */
+
 ?>
 
 <!DOCTYPE html>
